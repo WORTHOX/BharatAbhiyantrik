@@ -1,0 +1,101 @@
+body *{
+    padding: 0;
+    margin: 0;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+/* ::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: transparent;
+} */
+
+main{
+    display: flex;
+}
+
+.explorerContainer{
+    flex: 0.15;
+    background-color: #D1E5F4;
+    transition: all .3s linear;
+
+    &.close{
+        flex: unset;
+        width: 60px;
+        & h1{
+            display: none;
+        }
+
+        #library{
+            display: none;
+        }
+
+        .open{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 30px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        & ~ .materialContainer{
+            flex: 1;
+        }
+    }
+}
+
+.fileContainer{
+    /* background-color: #ccc; */
+    height: calc(100vh - 30px);
+    .open{
+        display: none;
+    }
+}
+
+.graphContainer{
+    flex: 0.425;
+    background: linear-gradient(to top, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.materialContainer{
+    flex: 0.425;
+    background: #8cc8f5;
+}
+
+.table_li{
+    cursor: pointer;
+
+    &:hover{
+        background-color: lightblue;
+    }
+}
+
+.graphContainer{
+    .graph:not(:empty){
+        background: antiquewhite;
+        padding: 20px;
+        border: 7px solid olive;
+        height: 535px;
+        margin-inline: 10px;
+    }
+
+    .metadata{
+        .table{
+            width: 300px;
+            & td{
+                background-color: transparent;
+                color: antiquewhite;
+                &:first-child{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bharat Abhiyantrik - ADMIN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .library:focus{
+            & option:first-child{
+                display: none;
+            }
+        }
+    </style>
+</head>
+  <body>
+    <nav class="sidebar">
+        <ul>
+            <li>
+                <input data-content="library" type="radio" name="nav_option" id="create_library">
+                <label for="create_library">Create Library</label>
+            </li>
+            <li>
+                <input data-content="table" type="radio" name="nav_option" id="create_table">
+                <label for="create_table">Create Table</label>
+            </li>
+            <li>
+                <input data-content="data" type="radio" name="nav_option" id="add_data" checked>
+                <label for="add_data">Add Data</label>
+            </li>
+        
+        </ul>
+    </nav>
+
+    <div class="library content">
+        <div class="mb-3 w-25">
+            <label for="library_input" class="form-label fs-5 fw-bold">Library Name</label>
+            <input type="text" class="form-control" id="library_input" placeholder="Properties">
+            <button class="btn btn-success mt-3" id="library_submit">Submit</button>
+         </div>
+    </div>
+
+    <div class="table content">
+        <h4>Select the Library : ToolBox</h4>
+        <select class="form-select w-25 library_select" aria-label="Default select example">
+            <option selected disabled>Select Library : ToolBox</option>
+            
+        </select>
+
+        <div class="w-75">
+            <label for="table_name" class="form-label fs-5 fw-bold">Table Name</label>
+            <input type="text" class="form-control" id="table_name" placeholder="Table Name">
+            <label for="metadata" class="form-label fs-5 fw-bold">Metadata</label>
+            <textarea type="text" class="form-control" id="metadata" placeholder="Reference Table, Ref Notes, "></textarea>
+            <label for="column_name" class="form-label fs-5 fw-bold">Column Names</label>
+            <textarea type="text" class="form-control" id="column_name" placeholder="Material, Group, Composition"></textarea>
+            <label for="selection_option" class="form-label fs-5 fw-bold">Selection Options</label>
+            <textarea type="text" class="form-control" id="selection_option" placeholder="Generic, Group, Composition"></textarea>
+            <button class="btn btn-success mt-3" id="table_submit">Submit</button>
+            <button class="btn btn-warning mt-3" id="table_import_xlsx">Import from excel</button>
+        </div>
+    </div>
+
+    <div class="data content active">
+        <h4>Select the Library : ToolBox</h4>
+        <select class="form-select w-25 library_select" aria-label="Default select example">
+            <option selected disabled>Select Library : ToolBox</option>
+        </select>
+
+        <h4>Select the Table</h4>
+        <select class="form-select w-25 table_select" aria-label="Default select example" disabled>
+            <option selected disabled>Select Table</option>
+        </select>
+
+        <div class="w-25 table_form"></div>
+        <button class="btn btn-warning mt-3" id="data_import_xlsx">Import from Excel</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx-style@0.8.13/dist/xlsx.full.min.js"></script>
+    
+    <script src="main.js"></script>
+    <script src="excel_reader.js"></script>
+    </body>
+</html>

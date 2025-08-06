@@ -1,0 +1,98 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
+html{
+    font-size: 62.5%;
+} */
+
+body{
+    background: #7ed6df;
+    display: flex;
+}
+
+.sidebar{
+    width: 250px;
+    background-color: #22a6b3;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+
+    & ul{
+        list-style-type: none;
+
+        & li{
+            font-size: 18px;
+        }
+    }
+
+    & input{
+        display: none;
+        + label{
+            width: 150px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+        &:checked + label{
+            background: #f6e58d;
+            padding: 5px;
+            border-radius: 10px;
+            border: 3px solid #fff;
+            cursor: not-allowed;
+        }
+    }
+}
+
+.content{
+    flex: 0.82;
+    padding-left: 265px;
+    display: none;
+}
+
+.content.active{
+    display: block;
+}
+
+select:disabled{
+    opacity: 0.8;
+}
+
+.table_form{
+
+    &:empty + #data_import_xlsx{
+        display: none;
+    }
+
+    .column_names_input, .metadata_input, .graph_range{
+        display: grid;
+        /* flex-wrap: wrap; */
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+
+        & textarea{
+            width: 200px;
+        }
+
+        & h4{
+            grid-area: 1 / 1 / 2 / 6;
+        }
+    }
+
+    .graph_values{
+        & textarea{
+            width: 500px;
+            resize: horizontal;
+        }
+    }
+
+    
+}

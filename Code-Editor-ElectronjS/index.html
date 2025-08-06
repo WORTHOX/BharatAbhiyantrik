@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/titleBar.css">
+    <link rel="stylesheet" href="css/explorerContent.css">
+    <link rel="stylesheet" href="css/matrtialContainer.css">
+    <title>Bharat Abhiyantrik</title>
+  </head>
+  <body>
+    <div class="c-container">
+
+    <div class="titleBar titleBarStyle">
+
+      <div class="windowTitle preventSelect draggable">Bharat Abhiyantrik</div>
+      <div class="windowControls windowControlsStyle preventSelect">
+        <button id="minimise">
+          <img src="assets/icons/win/minimize.svg">
+        </button>
+        <button id="maximise">
+          <img src="assets/icons/win/maximize.svg">
+        </button>
+        <button id="quit">
+          <img src="assets/icons/win/xmark.svg">
+        </button>
+      </div>
+
+
+    </div>
+
+    <main>
+      <div class="explorerContainer explorerContainerStyles">
+        <div class="fileContainer preventSelect">
+          <h1 class="fs-6">LIBRARY : TOOLBOX</h1>
+          
+          <div class="accordion" id="library">
+            <!-- Library Will be loaded from JS -->
+          </div>
+          <div class="open-explorer open">
+            <svg viewBox="64 64 896 896" focusable="false" data-icon="menu-unfold" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM142.4 642.1L298.7 519a8.84 8.84 0 000-13.9L142.4 381.9c-5.8-4.6-14.4-.5-14.4 6.9v246.3a8.9 8.9 0 0014.4 7z"></path></svg>
+          </div>
+        </div>
+                
+      </div>
+      <div class="graphContainer graphContainerStyles">
+         <div class="graph"></div>
+         <div class="metadata">
+           <table class="table">
+           </table>
+         </div>
+      </div>
+      <div class="materialContainer materialContainerStyles">
+        <table class="table">
+          <thead>
+            <tr id="columns"></tr>
+          </thead>
+          <tbody class="tbody">
+            
+          </tbody>
+        </table>
+
+
+      </div>
+    </main>
+
+    <div class="update-text">
+      2024 - Latest Data
+    </div>
+
+
+
+    </div>
+    <script src="js/titleBarStuff.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/graphContainer.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
